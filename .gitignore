@@ -14,4 +14,3 @@ storage/
 
 # Archivos de configuración secreta
 .env
-.env.*
