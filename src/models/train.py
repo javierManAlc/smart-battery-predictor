@@ -62,14 +62,6 @@ class PricePredictor:
 
         df = self.extract_and_engineer_features()
 
-        # === AUDITORÍA FORENSE DEFINITIVA (CORREGIDA) ===
-        print("\n🕵️‍♂️ Verificando la máquina del tiempo...")
-        fila_ejemplo = df.row(5000, named=True)
-        print(f"⏰ Fecha/Hora Actual:        {fila_ejemplo['timestamp']}")
-        print(f"💰 Precio Actual:            {fila_ejemplo['price_eur_mwh']:.2f} €/MWh")
-        print(f"📅 Valor del Lag 24h cruzado: {fila_ejemplo['feature_price_lag_24h']:.2f} €/MWh")
-        print("===================================\n")
-
         feature_cols = [c for c in df.columns if c.startswith("feature_")]
         target_col = "price_eur_mwh"
 
