@@ -11,3 +11,7 @@ data/database/*.db.wal
 # Logs y archivos temporales de Dagster
 .dagster/
 storage/
+
+# Archivos de configuración secreta
+.env
+.env.*
